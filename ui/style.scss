@@ -1,0 +1,349 @@
+@import "./scss/variables";
+// styles for container elements
+body{
+	margin: 0;
+	width: 100%;
+	font-family: $font !important;
+	min-width: 320px;
+
+
+}
+.container{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+
+.page-contents{
+	@include page-contents-padding($page-contents);
+}
+.section-one{
+	border: $border-grid;
+}
+.section-two{
+	border: $border-grid;
+}
+// styles for navigation panel
+nav {
+	margin: 0px;
+	width: 100%;
+
+	z-index: 3;
+	border-bottom: solid 1px #ebebe0;
+	position: fixed;
+	top: 0;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.logo-img{
+		img{
+			width:$page-contents;
+			height:100%;
+			position: absolute;
+			top: 0;
+		}
+	}
+}
+.row-div{
+	width:95%;
+	border: 1px  solid $grey;
+
+}
+.nav-bar-left{
+  display: flex;
+  background-color: white;
+	align-items: center;
+	.fa-bars{
+		display: block;
+		position: absolute;
+		font-size: 16px;
+		color: $red;
+	}
+
+	a{
+		@include nav-link;
+		background-color: $red;
+		color: white;
+		margin-left: $page-contents + 10px;
+
+		 &:hover{
+			background-color: black;
+		}
+	}
+}
+.nav-bar-right{
+	background-color: white;
+  display: flex;
+	justify-content: space-around;
+  align-items: center;
+	margin-right: $page-contents;
+	a{
+		@include nav-link;
+
+	}
+}
+.signin{
+	color:black;
+
+}
+.signup{
+	color:white;
+	background-color: black;
+}
+
+// styles for jumbotron
+.jumbotron{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	top:$nav-height;
+	padding-top: 15%;
+	padding-bottom: 15%;
+	p{
+		position: relative;
+		top: 46%;
+		font-size: 20px;
+		font-family: $font;
+	}
+}
+.jumbotron-2{
+	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+	background-image:  url("../images/jumbo-bg.jpg");
+	position: relative;
+	background-repeat: no-repeat;
+
+}
+
+// styles for menu  and footer bar
+.menu{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	border-bottom: solid 1px $grey;
+	padding: $menu-padding;
+}
+.footer-menu{
+	display: flex;
+	justify-content: space-around;
+	border-bottom: solid 1px $grey;
+	width: 100%;
+	padding: $menu-padding;
+}
+
+// styles for columns
+
+.three-columns{
+	@include row-padding;
+	display: flex;
+	justify-content: space-between;
+
+}
+.two-columns{
+	display: flex;
+	justify-content: space-between;
+}
+.fa-chevron-down{
+	margin-left:20px
+}
+.topic-img{
+	position: relative;
+	padding: 1px;
+
+	img{
+		width:100%;
+
+ }
+}
+.topic-img-lg img{
+	width:100%;
+	height:400px;
+	height: auto;
+}
+.row-col{
+
+	@include rol-col-styles(30%);
+}
+.topic-img img{
+	width:100%;
+	height:200px;
+	// height: auto;
+}
+
+
+
+.row-col-lg{
+	border-right: solid 1px $grey ;
+	width: 65%;
+	padding-right:2.5%;
+}
+.author{
+	display: flex;
+	margin: 10px 0px 30px 0px;
+	}
+.author-img{
+	background-color: grey;
+	border-radius: 100%;
+	width:40px;
+	height: 40px;
+
+}
+.author-name{
+	@include author;
+	p {
+		margin:0px 0px 0px 5px;
+
+	}
+}
+.src{
+	color:  #33ccff;
+
+	.timestamp{
+		color:$grey;
+	}
+}
+.section{
+	@include author;
+	display: inline-block;
+	margin: 0px;
+	padding-top: 20px;
+	padding-bottom: 5px;
+	border-bottom: solid 1px black;
+	text-transform: uppercase;
+}
+.article-source{
+	@include author;
+	color:grey;
+
+}
+.article-head{
+	font-weight: bold;
+	font-size: 16px;
+	font-family: $font;
+	text-align: justify;
+}
+.article-txt{
+	font-size: 15px;
+	font-family: $font;
+	text-align: justify;
+
+}
+
+.add-comment{
+	@include author;
+	color: grey;
+}
+.col-2{
+	border-right: $grey-border ;
+	border-left:  $grey-border;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+
+}
+
+.read-more{
+	margin-top: 150px;
+	margin-bottom: 50px;
+	text-align: center;
+	a{
+		text-decoration: none;
+	  padding: $button;
+	  font-family: $font;
+	  font-size: 14px;
+	  font-weight: 500;
+		background-color: $red;
+		color: white;
+		&:hover{
+		 background-color: black;
+		}
+	}
+}
+
+
+
+.actions{
+	display:inline;
+	align-items:flex-start;
+	.fa{
+		padding: 10px;
+		font-size: 20px;
+		border-radius: 50%
+	}
+	.action1{
+		color: red;
+	}
+	.action2{
+		color: grey;
+		background-color: $grey;
+
+	}
+	.action3{
+		color: grey;
+		background-color: $grey;
+	}
+}
+.fa-chevron-down{
+	margin-left:20px
+}
+
+
+
+
+
+
+// mobile phones media query styles
+@media only screen and ( max-width: 320px){
+.nav-bar-left{
+	width: 100%;
+	display: flex;
+	.get-the-app{
+		margin: 20px 0 20px 25px;
+	}
+	.fa-bars{
+		display: block;
+		right:15px;
+	}
+}
+.nav-bar-right{
+	display: none;
+}
+.page-contents{
+	@include page-contents-padding(15px);
+}
+.three-columns{
+	display: inline;
+}
+.two-columns{
+	display: inline;
+}
+.row-col{
+	@include rol-col-styles(90%);
+}
+
+}
+
+@media only screen
+and (min-width: 321px)
+and (max-width: 480px){
+
+
+}
+@media only screen
+and (min-width: 768px)
+and (max-width: 1024px){
+
+
+}
+@media only screen
+and (max-width: 1200px){
+
+}
+
+
+
+/*# sourceMappingURL=style.css.map */

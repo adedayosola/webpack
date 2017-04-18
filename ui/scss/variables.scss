@@ -1,0 +1,75 @@
+
+// variable declarations
+$nav-height: 59px;
+$red: #e60000;
+$font: Palanquin, sans-serif;
+$grey: #ebebe0;
+$grey-border: solid 1px $grey;
+$button: 3px 30px 3px 30px;
+$page-contents:75px;
+$border-grid:none;
+$menu-padding: 20px 0 20px 0px;
+
+// font styles
+@font-face {
+  font-family: 'Palanquin';
+  src: url('../fonts/fonts/Palanquin/Palanquin-Bold.ttf')format('truetype'),
+       url('../fonts/fonts/Palanquin/Palanquin-ExtraLight.ttf')format('truetype'),
+       url('../fonts/fonts/Palanquin/Palanquin-Light.ttf')format('truetype'),
+       url('../fonts/fonts/Palanquin/Palanquin-Medium.ttf')format('truetype'),
+       url('../fonts/fonts/Palanquin/Palanquin-Regular.ttf')format('truetype'),
+       url('../fonts/fonts/Palanquin/Palanquin-SemiBold.ttf')format('truetype'),
+       url('../fonts/fonts/Palanquin/Palanquin-Thin.tf')format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+  @font-face {
+    font-family: 'Karla';
+    src: url('ui/fonts/fonts/Karla/Karla-Bold.ttf')format('truetype') ,
+         url('ui/fonts/fonts/Karla/Karla-BoldItalic.ttf')format('truetype'),
+         url('ui/fonts/fonts/Karla/KarlaItalic.ttf')format('truetype'),
+         url('ui/fonts/fonts/Karla/Karla-Regular.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  };
+
+// mixins
+@mixin page-contents-padding($page-contents){
+  margin-left: $page-contents;
+  margin-right: $page-contents;
+  border: $border-grid;
+}
+@mixin rol-col-styles($percent){
+  width: $percent;
+}
+@mixin nav-link{
+  text-decoration: none;
+  padding: $button;
+  margin-left: 100px;
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@mixin row-padding{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+@mixin author {
+	font-size: 10px;
+	font-family: $font;
+
+}
+@mixin bg-img($background-image){
+  background-image: url($background-image);
+  background-size: 30%;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 30%;
+  }
